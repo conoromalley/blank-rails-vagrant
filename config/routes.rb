@@ -1,4 +1,7 @@
-AptanaCreated::Application.routes.draw do
+RailsDevBox::Application.routes.draw do
+  get "static_pages/api"
+  get "static_pages/contact"
+  get "static_pages/developers"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-AptanaCreated::Application.load_tasks
+RailsDevBox::Application.load_tasks
