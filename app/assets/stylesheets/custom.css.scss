@@ -1,0 +1,64 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 110px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: left;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* header */
+// 
+.adwlinks {
+ float: left;
+}
+
+.umlinks {
+ float: right;
+}
+
+#ADW-logo-written {
+  float: top;
+  text-align: left;
+  padding-top: 6px;
+  padding-bottom: 3px;
+}
+
+#ADW-logo {
+  float: bottom;
+  text-align: left;
+  padding-top: 3px;
+  padding-bottom: 6px;
+}
+
+.UMMZ-logo {
+  float: top;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.UM-logo {
+  float: bottom;
+  text-align: right;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
