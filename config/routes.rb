@@ -1,7 +1,9 @@
 RailsDevBox::Application.routes.draw do
-  get "static_pages/api"
-  get "static_pages/contact"
-  get "static_pages/developers"
+  match '/api', to: 'static_pages#api', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/developers', to: 'static_pages#developers', via: 'get'
+  match '/collection_builder', to: 'static_pages#collection_builder', via: 'get'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
