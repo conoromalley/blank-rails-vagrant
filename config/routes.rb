@@ -1,10 +1,24 @@
 RailsDevBox::Application.routes.draw do
-
+  
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :sessions,      only: [:new, :create, :destroy]
+  resources :microposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+  
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  root  'static_pages#api'
   match '/api', to: 'static_pages#api', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/developers', to: 'static_pages#developers', via: 'get'
   match '/collection_builder', to: 'static_pages#collection_builder', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
+  match '/home', to: 'static_pages#home', via: 'get'  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

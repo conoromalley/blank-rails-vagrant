@@ -5,6 +5,7 @@ Vagrant::Config.run do |config|
   # config.vm.share_folder "open_camp_directory", "/home/vagrant/open_camp", "WINDOWS FOLDER PATH" 
 
   config.vm.forward_port 3000, 3000
+  config.vm.forward_port 5432, 5432
 
   config.vm.provision :puppet,
     :manifests_path => 'puppet/manifests',
